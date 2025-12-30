@@ -1,0 +1,630 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  overflow: scroll;
+  align-items: center;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  width: 100%;
+  height: 20vh;
+  top: 0;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #000000;
+  background-color: #068d55;
+  margin-bottom: 10px;
+  opacity: 0.85;
+}
+
+.header img {
+  height: 100%;
+  border-radius: 15px;
+  opacity: 0.9;
+}
+
+.header a {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.header i {
+  color: rgb(9, 233, 9);
+  font-size: 3rem;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.header i {
+  animation: pulse 1.5s infinite;
+}
+
+.header .navigation {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: auto;
+  margin-right: 20px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: rgb(255, 255, 255);
+}
+
+/* Floating button style */
+.call-float {
+  bottom: 90px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  background: #28a745;
+  color: white;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  cursor: pointer;
+}
+
+/* Shake animation */
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(15deg); }
+  50% { transform: rotate(-15deg); }
+  75% { transform: rotate(15deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.shake {
+  animation: shake 0.5s infinite;
+}
+
+
+.content {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #000000;
+  margin-bottom: 10px;
+
+}
+
+.slideshow {
+  width: 50%;
+  height: 100%;
+  margin-left: 10px;
+}
+
+.slide {
+  position: relative; 
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slide img {
+  width: 100%;
+  height: 400px;
+  object-fit: contain;
+}
+
+/* Caption overlay */
+.caption {
+  position: absolute;
+  bottom: 70px;
+  left: 20px;
+  color: white;
+  background: rgba(0,0,0,0.3);
+  padding: 10px 15px;
+  border-radius: 8px;
+  bottom: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.daraja {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+} 
+
+.daraja form {
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.daraja a i{
+  color: #25d366;
+  font-size: 3rem;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.daraja a i {
+  animation: pulse 1.5s infinite;
+}
+
+
+form button{
+  background-color: green;
+  color: white ;
+}
+
+.testimonial {
+  display: flex;
+  align-items: center;      /* vertically center image and text */
+  gap: 20px;                /* space between image and text */
+  max-width: 900px;
+  height: auto;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;          /* wraps content on small screens */
+}
+
+.testimonial img {
+  width: 250px;             /* smaller image */
+  height: auto;
+  border-radius: 10px;
+  flex-shrink: 0;           /* prevent image from shrinking too much */
+}
+
+.testimonial .section-text {
+  flex: 1;                  /* text takes remaining space */
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Newsletter Section */
+.newsletter {
+  text-align: center;
+}
+
+.newsletter-form {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap; /* wraps on small screens */
+}
+
+.newsletter-form input[type="email"] {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 2px solid #27ae60;
+  border-radius: 8px;
+  outline: none;
+  min-width: 250px;
+  flex: 1;
+}
+
+.newsletter-form input[type="email"]:focus {
+  border-color: #068d55;
+  box-shadow: 0 0 8px rgba(39, 174, 96, 0.5);
+}
+
+.newsletter-form button {
+  background-color: #27ae60;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #068d55;
+  transform: scale(1.05);
+}
+
+/* Optional message */
+.newsletter-message {
+  margin-top: 15px;
+  font-size: 0.95rem;
+  color: #2c3e50;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .newsletter-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .newsletter-form input[type="email"] {
+    width: 90%;
+  }
+
+  .newsletter-form button {
+    width: 90%;
+  }
+}
+
+.footer {
+  width: 100%;
+  height: 105vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+  background-color: #000000;
+}
+
+.copyright {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  background-color: #000000;
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* General Section Styles */
+.section {
+  max-width: 900px;       
+  margin: 50px auto;      
+  padding: 40px 20px;     
+  background-color: #f8f8f8; 
+  border-radius: 12px;    
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+  color: #333;            
+  line-height: 1.7;       
+  font-family: 'Arial', sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for subtle interaction */
+.section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Section Headings */
+.section-heading {
+  font-size: 2rem;
+  color: #2c3e50;          
+  margin-bottom: 20px;
+  text-align: center;       
+  position: relative;
+}
+
+/* Optional underline for headings */
+.section-heading::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #27ae60; 
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Paragraph styles */
+.section-text {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+/* Bold text inside paragraphs */
+.section-text strong {
+  color: #27ae60; 
+}
+
+/* Values List */
+#values-list {
+  list-style: none;       
+  padding-left: 0;
+}
+
+.value-item {
+  background: #eafaf1;   
+  margin-bottom: 10px;
+  padding: 12px 15px;
+  border-left: 5px solid #27ae60; 
+  border-radius: 6px;
+}
+
+/* Responsive adjustments */
+/* Mobile Devices */
+@media (max-width: 768px) {
+
+  /* Header adjustments */
+  .header {
+    position: static; /* disables sticky on mobile */
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 10px 0;
+    margin-bottom: 20px;
+  }
+
+  .header img {
+    height: 50px;
+    margin-bottom: 5px;
+  }
+
+  .header .navigation {
+    flex-direction: column;
+    gap: 8px;
+    font-size: 1rem;
+    margin: 5px 0 0 0;
+  }
+
+  .header i {
+    font-size: 2rem;
+  }
+
+  /* Content layout: stack slideshow and form */
+  .content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    height: auto;
+  }
+
+  .slideshow, .daraja {
+    width: 95%;
+    margin: 0;
+  }
+
+  .slide img {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+  }
+
+  .caption {
+    font-size: 1rem;
+    bottom: 20%;
+    padding: 6px 10px;
+  }
+
+  .daraja form {
+    width: 100%;
+  }
+
+  .daraja a i {
+    font-size: 2.5rem;
+  }
+
+  /* WhatsApp button adjustments */
+  .call-float {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+    bottom: 70px;
+    right: 15px;
+  }
+
+  /* Sections adjustments */
+  .section {
+    margin: 30px 10px;
+    padding: 20px 15px;
+  }
+
+  .section-heading {
+    font-size: 1.5rem;
+  }
+
+  .section-text {
+    font-size: 0.95rem;
+  }
+
+  #values-list .value-item {
+    font-size: 0.95rem;
+    padding: 10px 12px;
+  }
+
+  /* Footer adjustments */
+  .footer {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 0;
+  }
+}
+
+
+/* Media Queries for Tablets and Small Screens */
+@media (max-width: 1024px) {
+
+  /* Header */
+  .header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .header .navigation {
+    margin: 10px 0 0 0;
+    font-size: 1rem;
+    gap: 15px;
+  }
+
+  .header img {
+    height: 60px;
+  }
+
+  .header i {
+    font-size: 2.5rem;
+  }
+
+  /* Content layout */
+  .content {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    gap: 20px;
+  }
+
+  .slideshow, .daraja {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .slide img {
+    height: auto;
+    max-height: 300px;
+  }
+
+  .caption {
+    font-size: 1.2rem;
+    bottom: 25%;
+  }
+
+  .daraja form {
+    width: 100%;
+  }
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+
+  /* Header */
+  .header {
+    padding: 5px 0;
+  }
+
+  .header .navigation {
+    font-size: 0.9rem;
+    gap: 10px;
+  }
+
+  .header i {
+    font-size: 2rem;
+  }
+
+  .header img {
+    height: 50px;
+  }
+
+  /* Content layout */
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .slideshow, .daraja {
+    width: 95%;
+    margin: 10px 0;
+  }
+
+  .slide img {
+    width: 100%;
+    height: auto;
+  }
+
+  .caption {
+    font-size: 1rem;
+    bottom: 20%;
+    padding: 8px 10px;
+  }
+
+  /* WhatsApp Button */
+  .call-float {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+    bottom: 70px;
+    right: 15px;
+  }
+
+  .daraja a i {
+    font-size: 2.5rem;
+  }
+}
+
+/* Media Queries for Very Small Phones */
+@media (max-width: 480px) {
+
+  .header .navigation {
+    flex-direction: column;
+    gap: 5px;
+    margin: 5px 0 0 0;
+  }
+
+  .header img {
+    height: 40px;
+  }
+
+  .header i {
+    font-size: 1.8rem;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .slideshow, .daraja {
+    width: 100%;
+  }
+
+  .caption {
+    font-size: 0.9rem;
+    padding: 5px 8px;
+  }
+
+  .call-float {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    bottom: 60px;
+    right: 10px;
+  }
+
+  .daraja a i {
+    font-size: 2rem;
+  }
+
+  .section {
+    margin: 30px 10px;
+    padding: 20px 15px;
+  }
+
+  .section-heading {
+    font-size: 1.5rem;
+  }
+
+  .section-text {
+    font-size: 0.95rem;
+  }
+}
+

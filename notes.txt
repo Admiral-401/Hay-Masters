@@ -1,0 +1,13 @@
+//whatsapp
+
+
+  <p>Hay mastersterpiece!
+  </p>
+
+<a
+  href="https://wa.me/254710638294?text=Hello%20Hay-Masters%2C%20I%20am%20interested%20in%20buying%20hay.%20Kindly%20assist."
+  class="whatsapp-float"
+  target="_blank"
+>
+  <i class="fab fa-whatsapp"></i>
+</a>

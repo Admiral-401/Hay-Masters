@@ -215,10 +215,11 @@ form button{
 }
 
 .testimonial {
+  width: 80%;
+  height: auto;
   display: flex;
   align-items: center;      /* vertically center image and text */
   gap: 20px;                /* space between image and text */
-  max-width: 900px;
   height: auto;
   margin: 50px auto;
   padding: 20px;
@@ -228,19 +229,33 @@ form button{
   flex-wrap: wrap;          /* wraps content on small screens */
 }
 
+.testimonial div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
 .testimonial img {
-  width: 250px;             /* smaller image */
+  width: 40%;             
   height: auto;
   border-radius: 10px;
   flex-shrink: 0;           /* prevent image from shrinking too much */
 }
 
 .testimonial .section-text {
-  flex: 1;                  /* text takes remaining space */
+  flex-wrap: wrap;
+  flex: 1;                  
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #333;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  float: right;
+  padding: 10px 15px;
+  background-color: rgb(45, 187, 76);
+  color: #fcfcfc;
 }
+
 
 /* Newsletter Section */
 .newsletter {

@@ -90,9 +90,8 @@ body {
 .call-float {
   bottom: 90px;
   right: 20px;
-  width: 55px;
-  height: 55px;
-  background: #28a745;
+  width: 45px;
+  height: 45px;
   color: white;
   font-size: 26px;
   display: flex;
@@ -100,7 +99,6 @@ body {
   justify-content: center;
   border-radius: 50%;
   text-decoration: none;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   cursor: pointer;
 }
 
@@ -125,7 +123,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin: 70px 0;
 
 }
 
@@ -166,8 +164,6 @@ body {
   font-size: 1.5rem;
 }
 
-
-
 .slide.active .caption {
   animation: fadeUp 0.6s ease;
 }
@@ -182,9 +178,6 @@ body {
     transform: translateY(0);
   }
 }
-
-
-
 
 .daraja {
   width: 45%;
@@ -262,8 +255,10 @@ form button{
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   float: right;
   padding: 10px 15px;
-  background-color: rgb(45, 187, 76);
-  color: #fcfcfc;
+  border-radius: 25px;
+  background-color: rgb(138, 235, 159);
+  color: #080808;
+  opacity: 0.9;
 }
 
 
@@ -476,8 +471,87 @@ form button{
     align-items: center;
     height: auto;
     padding: 10px 0;
-    margin-bottom: 20px;
+    
   }
+
+
+
+
+   .header .caller img {
+    height: 55px;
+    margin-bottom: 8px;
+    align-items: flex-end;
+  }
+
+  .header .caller a i {
+    font-size: 1.5rem;
+  }
+
+  .header i {
+    font-size: 1.5rem;
+    float: left;
+  }
+
+  .header .caller{
+    position: absolute;
+    left: 10px;
+  }
+
+  .header .navigation {
+    gap: 5px;
+    font-size: 0.9rem;
+    margin: 0 5px 0 0;
+    display: none; /* Hide navigation links by default */
+  }
+
+  .header .navigation.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 45px;
+    background-color: #068d55;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    z-index: 1000;
+  } 
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    margin-left: 175px;
+    cursor: pointer;
+  }
+
+  .menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .menu-toggle .bar {
+    transition: all 0.3s ease;
+  }
+
+
+
+
+
 
   .header img {
     height: 50px;

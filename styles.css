@@ -414,17 +414,88 @@ form button{
 @media (max-width: 1024px) {
 
   .header {
-    flex-direction: column;
+    flex-direction: row;
     height: auto;
     padding: 10px 0;
   }
 
-  .header img {
-    height: 60px;
+ .header img {
+    height: 55px;
+    margin-bottom: 8px;
+    align-items: flex-end;
+  }
+
+  .header .caller a i {
+    font-size: 1.5rem;
   }
 
   .header i {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
+    float: left;
+  }
+
+  .header .caller{
+    position: absolute;
+    left: 10px;
+  }
+
+  .header .navigation {
+    gap: 5px;
+    font-size: 0.9rem;
+    margin: 0 5px 0 0;
+    display: none; /* Hide navigation links by default */
+  }
+
+  .header .navigation.active {
+    width: auto;
+    height: auto;
+    display: block;
+    flex-direction: column;
+    position: absolute;
+    margin: 40px 0 0 0 ;
+    top: 45px;
+    background-color: #068d55;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 3000;
+  } 
+
+  .menu-toggle {
+    width: 65px;
+    height: 55px;
+    display: flex;
+    padding: 5px 5px;
+    flex-direction: column;
+    position: absolute;
+    cursor: pointer;
+    right: 10px;
+  }
+
+  .menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .menu-toggle .bar {
+    transition: all 0.3s ease;
   }
 
   .header .navigation {
@@ -474,9 +545,6 @@ form button{
     
   }
 
-
-
-
    .header .caller img {
     height: 55px;
     margin-bottom: 8px;
@@ -505,7 +573,9 @@ form button{
   }
 
   .header .navigation.active {
-    display: flex;
+    width: auto;
+    height: auto;
+    display: block;
     flex-direction: column;
     position: absolute;
     top: 45px;
@@ -517,14 +587,19 @@ form button{
   } 
 
   .menu-toggle {
+    width: 65px;
+    height: 55px;
     display: flex;
+    padding: 5px 5px;
     flex-direction: column;
-    margin-left: 175px;
+    position: absolute;
     cursor: pointer;
+    right: 10px;
+    top: 1px;
   }
 
   .menu-toggle .bar {
-    width: 25px;
+    width: 15px;
     height: 3px;
     background-color: white;
     margin: 4px 0;
@@ -546,20 +621,6 @@ form button{
 
   .menu-toggle .bar {
     transition: all 0.3s ease;
-  }
-
-
-
-
-
-
-  .header img {
-    height: 50px;
-    margin-bottom: 5px;
-  }
-
-  .header i {
-    font-size: 2rem;
   }
 
   .header .navigation {

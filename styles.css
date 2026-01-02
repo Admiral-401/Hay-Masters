@@ -23,8 +23,18 @@ body {
   opacity: 0.85;
 }
 
+.header .caller {
+  width: 0%;
+  height: 100%;
+  display: flex;
+  margin: 0;
+  align-items: start;
+  justify-content: flex-start;
+} 
+
 .header img {
   height: 100%;
+  margin-right: 5px;
 }
 
 .header a {
@@ -44,7 +54,7 @@ body {
   text-decoration: none;
   border: 1px solid white;
   border-radius: 25px;
-  padding: 10px 15px;
+  padding: 5px 15px;
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -308,22 +318,6 @@ form button{
   color: #2c3e50;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .newsletter-form {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .newsletter-form input[type="email"] {
-    width: 90%;
-  }
-
-  .newsletter-form button {
-    width: 90%;
-  }
-}
-
 .footer {
   width: 100%;
   height: 105vh;
@@ -419,121 +413,15 @@ form button{
   border-radius: 6px;
 }
 
-/* Responsive adjustments */
-/* Mobile Devices */
-@media (max-width: 768px) {
-
-  /* Header adjustments */
-  .header {
-    position: static; /* disables sticky on mobile */
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    padding: 10px 0;
-    margin-bottom: 20px;
-  }
-
-  .header img {
-    height: 50px;
-    margin-bottom: 5px;
-  }
-
-  .header .navigation {
-    flex-direction: column;
-    gap: 8px;
-    font-size: 1rem;
-    margin: 5px 0 0 0;
-  }
-
-  .header i {
-    font-size: 2rem;
-  }
-
-  /* Content layout: stack slideshow and form */
-  .content {
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 20px;
-    height: auto;
-  }
-
-  .slideshow, .daraja {
-    width: 95%;
-    margin: 0;
-  }
-
-  .slide img {
-    width: 100%;
-    height: auto;
-    max-height: 250px;
-  }
-
-  .caption {
-    font-size: 1rem;
-    bottom: 20%;
-    padding: 6px 10px;
-  }
-
-  .daraja form {
-    width: 100%;
-  }
-
-  .daraja a i {
-    font-size: 2.5rem;
-  }
-
-  /* WhatsApp button adjustments */
-  .call-float {
-    width: 50px;
-    height: 50px;
-    font-size: 22px;
-    bottom: 70px;
-    right: 15px;
-  }
-
-  /* Sections adjustments */
-  .section {
-    margin: 30px 10px;
-    padding: 20px 15px;
-  }
-
-  .section-heading {
-    font-size: 1.5rem;
-  }
-
-  .section-text {
-    font-size: 0.95rem;
-  }
-
-  #values-list .value-item {
-    font-size: 0.95rem;
-    padding: 10px 12px;
-  }
-
-  /* Footer adjustments */
-  .footer {
-    flex-direction: column;
-    height: auto;
-    padding: 20px 0;
-  }
-}
-
-
-/* Media Queries for Tablets and Small Screens */
+/* =========================
+   TABLETS & SMALL LAPTOPS
+========================= */
 @media (max-width: 1024px) {
 
-  /* Header */
   .header {
     flex-direction: column;
     height: auto;
     padding: 10px 0;
-  }
-
-  .header .navigation {
-    margin: 10px 0 0 0;
-    font-size: 1rem;
-    gap: 15px;
   }
 
   .header img {
@@ -544,7 +432,12 @@ form button{
     font-size: 2.5rem;
   }
 
-  /* Content layout */
+  .header .navigation {
+    margin: 10px 0 0 0;
+    gap: 15px;
+    font-size: 1rem;
+  }
+
   .content {
     flex-direction: column;
     align-items: center;
@@ -552,14 +445,15 @@ form button{
     gap: 20px;
   }
 
-  .slideshow, .daraja {
+  .slideshow,
+  .daraja {
     width: 90%;
     margin: 0 auto;
   }
 
   .slide img {
-    height: auto;
     max-height: 300px;
+    height: auto;
   }
 
   .caption {
@@ -572,50 +466,64 @@ form button{
   }
 }
 
-/* Media Queries for Mobile Devices */
+/* =========================
+   MOBILE DEVICES
+========================= */
 @media (max-width: 768px) {
 
-  /* Header */
   .header {
-    padding: 5px 0;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 10px 0;
+    margin-bottom: 20px;
   }
 
-  .header .navigation {
-    font-size: 0.9rem;
-    gap: 10px;
+  .header img {
+    height: 50px;
+    margin-bottom: 5px;
   }
 
   .header i {
     font-size: 2rem;
   }
 
-  .header img {
-    height: 50px;
+  .header .navigation {
+    flex-direction: column;
+    gap: 8px;
+    font-size: 1rem;
+    margin: 5px 0 0 0;
   }
 
-  /* Content layout */
   .content {
     flex-direction: column;
     align-items: center;
+    gap: 20px;
+    height: auto;
   }
 
-  .slideshow, .daraja {
+  .slideshow,
+  .daraja {
     width: 95%;
-    margin: 10px 0;
+    margin: 0;
   }
 
   .slide img {
     width: 100%;
+    max-height: 250px;
     height: auto;
   }
 
   .caption {
     font-size: 1rem;
     bottom: 20%;
-    padding: 8px 10px;
+    padding: 6px 10px;
   }
 
-  /* WhatsApp Button */
+  .daraja a i {
+    font-size: 2.5rem;
+  }
+
   .call-float {
     width: 50px;
     height: 50px;
@@ -624,34 +532,120 @@ form button{
     right: 15px;
   }
 
-  .daraja a i {
-    font-size: 2.5rem;
+  .section {
+    margin: 30px 10px;
+    padding: 20px 15px;
+  }
+
+  .footer {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 0;
+  }
+
+  /* Newsletter */
+  .newsletter-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .newsletter-form input,
+  .newsletter-form button {
+    width: 90%;
   }
 }
 
-/* Media Queries for Very Small Phones */
+/* =========================
+   VERY SMALL PHONES
+========================= */
 @media (max-width: 480px) {
-
-  .header .navigation {
-    flex-direction: column;
-    gap: 5px;
-    margin: 5px 0 0 0;
+  .header {
+    width: 100%;
+    height: 60px;
+    position: relative;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    padding: 8px 0;
+    margin-bottom: 15px;
   }
 
-  .header img {
-    height: 40px;
+  .header .caller img {
+    height: 55px;
+    margin-bottom: 8px;
+    align-items: flex-end;
+  }
+
+  .header .caller a i {
+    font-size: 1.5rem;
   }
 
   .header i {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    float: left;
   }
 
-  .content {
+  .header .caller{
+    position: absolute;
+    left: 10px;
+  }
+
+  .header .navigation {
+    gap: 5px;
+    font-size: 0.9rem;
+    margin: 0 5px 0 0;
+    display: none; /* Hide navigation links by default */
+  }
+
+  .header .navigation.active {
+    display: flex;
     flex-direction: column;
+    position: absolute;
+    top: 45px;
+    background-color: #068d55;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1000;
+  } 
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-left: 135px;
+    cursor: pointer;
   }
 
-  .slideshow, .daraja {
-    width: 100%;
+  .menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .menu-toggle .bar {
+    transition: all 0.3s ease;
+  }
+
+  .slideshow,
+  .daraja {
+    width:90%;
   }
 
   .caption {
@@ -671,17 +665,43 @@ form button{
     font-size: 2rem;
   }
 
-  .section {
-    margin: 30px 10px;
-    padding: 20px 15px;
+  .testimonial {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: auto;
   }
 
-  .section-heading {
-    font-size: 1.5rem;
+  .testimonial div {
+    flex-direction: column;
+    gap: 10px;
+  } 
+
+  .testimonial .mid{
+    flex-direction: row;
+    gap: 10px;  
+
   }
 
-  .section-text {
-    font-size: 0.95rem;
+  .testimonial .mid .section-text {
+    font-size: 0.9rem;
+  } 
+
+  .testimonial .mid img {
+    width: 45%;
+    margin-bottom: 10px;
   }
+
+  .testimonial img {
+    width: 100%;
+    margin-bottom: 15px;
+}
+  .testimonial .section-text {
+    background-color: seashell;
+    color: black;
+    font-size: 1rem;
+  }
+
 }
 

@@ -572,28 +572,25 @@ form button{
     display: none; /* Hide navigation links by default */
   }
 
-  .header .navigation.active {
+  .navigation.active {
     width: auto;
     height: auto;
     display: block;
     flex-direction: column;
     position: absolute;
-    top: 45px;
     background-color: #068d55;
     padding: 10px;
     color: white;
     border-radius: 5px;
-    z-index: 1000;
+    z-index: 3;
   } 
 
   .menu-toggle {
-    width: 65px;
-    height: 55px;
     display: flex;
-    padding: 5px 5px;
     flex-direction: column;
     position: absolute;
     cursor: pointer;
+    background-color: transparent;
     right: 10px;
     top: 1px;
   }
@@ -613,10 +610,14 @@ form button{
 
   .menu-toggle.active .bar:nth-child(1) {
     transform: translateY(7px) rotate(45deg);
+    background-color: red;
+    width: 15px;
   }
 
   .menu-toggle.active .bar:nth-child(3) {
     transform: translateY(-7px) rotate(-45deg);
+    background-color: red;
+    width: 15px;
   }
 
   .menu-toggle .bar {
@@ -689,6 +690,166 @@ form button{
     width: 90%;
   }
 }
+
+
+
+/*========================
+Medium sized phones
+=========================*/
+@media (max-width: 600px) {
+
+  .header {
+    flex-direction: row;
+    align-items: center;
+    height: auto; 
+  }
+
+   .header .caller img {
+    height: 55px;
+    margin-bottom: 8px;
+    align-items: flex-end;
+  }
+
+  .header .caller a i {
+    font-size: 1.5rem;
+  }
+
+  .header i {
+    font-size: 1.5rem;
+    float: left;
+  }
+
+  .header .caller{
+    position: absolute;
+    left: 10px;
+  }
+
+  .header .navigation {
+    gap: 5px;
+    font-size: 0.9rem;
+    margin: 0 5px 0 0;
+    display: none; /* Hide navigation links by default */
+  }
+
+  .navigation.active {
+    width: auto;
+    height: auto;
+    display: block;
+    flex-direction: column;
+    position: absolute;
+    background-color: #068d55;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    z-index: 3;
+  } 
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    cursor: pointer;
+    background-color: transparent;
+    right: 5px;
+    top: 20px;
+  }
+
+  .menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+    background-color: red;
+    width: 15px;
+  }
+
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+    background-color: red;
+    width: 15px;
+  }
+
+  .menu-toggle .bar {
+    transition: all 0.3s ease;
+  }
+
+  .header .navigation {
+    flex-direction: column;
+    gap: 8px;
+    font-size: 1rem;
+    margin: 5px 0 0 0;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    height: auto;
+  }
+
+  .slideshow,
+  .daraja {
+    width: 95%;
+    margin: 0;
+  }
+
+  .slide img {
+    width: 100%;
+    max-height: 250px;
+    height: auto;
+  }
+
+  .caption {
+    font-size: 1rem;
+    bottom: 20%;
+    padding: 6px 10px;
+  }
+
+  .daraja a i {
+    font-size: 2.5rem;
+  }
+
+  .call-float {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+    bottom: 70px;
+    right: 15px;
+  }
+
+  .section {
+    margin: 30px 10px;
+    padding: 20px 15px;
+  }
+
+  .footer {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 0;
+  }
+
+  /* Newsletter */
+  .newsletter-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .newsletter-form input,
+  .newsletter-form button {
+    width: 90%;
+  }
+}
+
 
 /* =========================
    VERY SMALL PHONES

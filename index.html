@@ -11,6 +11,11 @@
   <link rel="stylesheet" href="styles.css">
 
   <title>Baraka pasture Co.</title>
+
+<link rel="icon" sizes="32x32" href="./hay site images/hay-logo.png">
+<link rel="icon" sizes="16x16" href="favicon-16.png">
+
+
 </head>
 <body>
 
@@ -32,7 +37,7 @@
   </div>
 
     <div class="navigation">
-      <a href="index.html">Home</a>
+      <a href="index.html" class="active">Home</a>
       <a href="about.html">About Us</a>
       <a href="#vision">Products</a>
       <a href="#mission">Blogs</a>
@@ -84,18 +89,19 @@
 </div>
 
 <div class="daraja">
-  <form action="">
-    <p>Make your payment as you order</p>
+
+    <form action="">
+    <h3>Make your payment as you order</h3>
      <a href="https://wa.me/254710638294 ?text=Hello%20Baraka pasture Co.%20Kindly%20assist."
     class="whatsapp-float"
     target="_blank" title="place your order via whatsApp">
        <i class="fab fa-whatsapp" class="whats"></i>
     </a>
-    <img src="./hay site images/lipa-na-mchwaa.svg" width="250px" height="100px" alt="">
+    <img src="./hay site images/lipa-na-mchwaa.svg" width="250px" height="30px" alt="">
     <label for="paybill">Paybill Number:</label>
-    <input type="text" id="paybill" name="paybill" placeholder="4002XX">
+    <input type="number" id="paybill" name="paybill" placeholder="4002XX">
     <label for="account">Account Number:</label>
-    <input type="text" id="account" name="account" placeholder="Enter account number">
+    <input type="number" id="account" name="account" placeholder="Enter account number">
     <label for="amount">Amount (KES):</label>
     <input type="number" id="amount" name="amount" placeholder="Enter amount">
     <label for="Mobile-Number">Your Phone Number</label>
@@ -103,91 +109,39 @@
 
     <button type="submit">Pay Now</button>
   </form>
+  
 </div>
 
   </section>
 
-  <h2 class="section-heading">About Baraka pasture Co.</h2>
-<section id="about" class="section">
-  
-  <p class="section-text">
-    <strong> Baraka pasture Co.</strong> is a Kenyan-based agribusiness founded by
-    <strong>Pst. John Moraya Kareithi</strong> alongside his partners and colleagues,
-    committed to supplying the market with <strong>high-quality Boma Rhodes hay</strong>
-    to support healthy livestock and productive farming.
-  </p>
-  <p class="section-text">
-    Hays Business was established to meet the growing demand for reliable,
-    nutritious, and well-prepared fodder across Kenya. With a deep understanding
-    of livestock nutrition and agricultural needs, the business focuses on
-    <strong>quality, consistency, and trust</strong> in every bale supplied.
-  </p>
-  <p class="section-text">
-    Through strong partnerships with farmers, transporters, and buyers,
-    Hays Business ensures timely delivery, fair pricing, and dependable supply
-    throughout the year. Our work supports livestock health, improved milk
-    production, and sustainable agricultural growth.
-  </p>
+<section class="cta">
+  <p>website under active development</p>
 </section>
 
-<h2 class="section-heading">Our Vision</h2>
-<section id="vision" class="section">
-  
-  <p class="section-text">
-    To become a <strong>leading and trusted supplier of quality hay and fodder
-    solutions in Kenya</strong>, supporting sustainable livestock farming and
-    national food security.
-  </p>
+<section class="contact">
+  <h2>Contact Us</h2>
+  <form id="contactForm">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" placeholder="Write your message..." required></textarea>
+
+    <button type="submit">Send Message</button>
+
+    <p class="form-feedback" id="formFeedback"></p>
+  </form>
 </section>
 
-<h2 class="section-heading">Our Mission</h2>
-<section id="mission" class="section">
-  <p class="section-text">
-    To consistently provide <strong>high-quality Boma Rhodes hay</strong> through
-    responsible sourcing, strong partnerships, and efficient distribution, while
-    supporting farmers with reliable feed solutions in all seasons.
-  </p>
-</section>
 
-<h2 class="section-heading">Our Core Values</h2>
-<section id="values" class="section">
-  <ul id="values-list">
-    <li class="value-item"><strong>Quality Excellence</strong> We never compromise on quality</li>
-    <li class="value-item"><strong>Integrity</strong> Honest and transparent dealings</li>
-    <li class="value-item"><strong>Reliability</strong> Consistent supply and dependable service</li>
-    <li class="value-item"><strong>Partnership</strong> Strong relationships across the value chain</li>
-    <li class="value-item"><strong>Sustainability</strong> Responsible farming for long-term growth</li>
-  </ul>
-</section>
-
-  <h2 class="section-heading">Testimonials</h2>
-
-<section class="testimonial">
-  <div >
-    <img src="./hay site images/farmer.png" alt="">
-  <p class="section-text">
-    "Baraka pasture Co. has been a reliable partner in supplying quality hay for our livestock. Their consistent service and excellent product have made a significant difference in our farm's productivity."
-  </p>
-  </div>
-  
-  <div class="mid">
+  <section class="footer">
     
-  <p class="section-text">
-    “We have worked with Baraka Pasture Co. for several seasons now, and their hay quality has remained outstanding. Deliveries are always on time, and our animals adapted well to the feed. We highly recommend them to any serious livestock farmer.”
-  </p>
-  <img src="./hay site images/farmer6.png" alt="">
-  </div>
+  <div class="reach-us">
 
-  <div>
-    <img src="./hay site images/farmer7.png" alt="">
-  <p class="section-text">
-    “What stands out about Baraka Pasture Co. is their honesty and commitment. From the first order to the latest delivery, they have been dependable and easy to work with. It’s reassuring to have a supplier you can truly trust.”
-  </p>
-  </div>
-
-</section>
-
-<section id="newsletter" class="section newsletter">
+    <section id="newsletter" class="section newsletter">
 
   <h2 class="section-heading">Subscribe to Our Newsletter</h2>
   <p class="section-text">
@@ -199,10 +153,8 @@
   </form>
   <p class="newsletter-message" id="newsletter-message"></p>
 </section>
-
-
-  <section class="footer">
     <div class="social">
+      
       <a href="#"><i class="fab fa-facebook-f"></i></a>
       <a href="#"><i class="fab fa-twitter"></i></a>
       <a href="#"><i class="fab fa-instagram"></i></a>
@@ -214,12 +166,24 @@
        </i>
     </a>
     </div>
+  </div>
+    
     <div class="contact">
-      <p><i class="fa-solid fa-envelope-open"></i> info@Barakapastures.com</p>
-      <p><i class="fa-solid fa-phone"></i>   +254 710 638 XXX</p>
-    </div>
-    <div class="location">
-      <p><i class="fa-solid fa-building-columns"></i>   Katakala Narok, Kenya</p>
+      <div class="info">
+      <p><i class="fa-solid fa-envelope-open"></i>-info@Barakapastures.com</p>
+      <p><i class="fa-solid fa-phone"></i>-+254 710 638 XXX</p>
+      <p><i class="fa-solid fa-building-columns"></i>-Katakala Narok, Kenya</p>
+      </div>
+
+      <div class="navigate">
+        <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="#vision">Products</a>
+      <a href="#mission">Blogs</a>
+      </div>
+
+      <img class="foot-logo" src="./hay site images/hay-logo.png" width="150px" height="140px" alt="company logo">
+
     </div>
     
   </section>

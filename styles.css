@@ -120,14 +120,14 @@ body {
 }
 
 .cta{
-  width: 95%;
+  width: 100%;
   height: 90vh;
   background-image: url('./hay site images/cta.png');
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; 
   display: flex;
-  border-radius: 15px;
   margin-bottom: 80px;
   flex-direction: column;
   justify-content: center;
@@ -135,6 +135,43 @@ body {
   color: white;
   text-align: center;
   padding: 0 20px;
+}
+
+.products {
+  width: 95%;
+  height: 95vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;  
+  background-color: #f4faf7;
+  border-radius: 15px;
+  margin-bottom: 80px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.product-item {
+  width: 30%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-top: 5px;
+  background-color: white;
+  justify-content: center;
+  padding: 15px;
+}
+
+.product-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 15px;
 }
 
 .message {
@@ -150,6 +187,27 @@ body {
   padding: 20px;
   text-align: center;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.products .btn {
+  width: 250px;
+  height: 80px;
+  background-color: #27ae60;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s, transform 0.3s;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.products .btn:hover {
+  background-color: red;
+  box-shadow: hsl(50%, 100%, 35%);
 }
 
 .content {
@@ -360,7 +418,7 @@ form button{
 
 .footer {
   width: 95%;
-  height: 95vh;
+  height: 100vh;
   border-radius: 25px;
   display: flex;
   align-items: center;
@@ -395,24 +453,35 @@ form button{
 }
 
 .social a {
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: space-around;
   text-decoration: none;
   color: white;
+  background-color: grey;
+  border-radius: 50%;
   font-size: 1.5rem;
   margin: 10px;
-  
+}
+
+.social a:hover {
+  background-color: #27ae60;
+  transform: scale(1.1);
 }
 
 .footer .contact {
-  width: 100%;
+  width: 95%;
   height: auto;
   display: flex;
   flex-direction: row;
   align-items: center;
+  border-top: 1px solid white;
+  padding-top: 20px;
   justify-content: space-between;
   margin-left: 60px;
+  margin-right: 60px;
 }
 
 .info {
@@ -420,15 +489,27 @@ form button{
   flex-direction: column;
   line-height: 1.5rem;
   margin-left: 60px;
-  align-items: center;
+  align-items: start;
   justify-content: flex-start;
+}
+
+.info a {
+  color: rgb(21, 230, 66);
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.info a:hover {
+  text-decoration: underline;
+  transform: scale(1.05);
+  color: #ffffff;
 }
 
 .navigate{
   display: flex;
   flex-direction: column;
   gap: 10px;
-  align-items: center;
+  align-items: start;
   justify-content: flex-start;  
 }
 
@@ -436,6 +517,12 @@ form button{
   color: white;
   text-decoration: none;
   font-size: 1.1rem;
+} 
+
+.navigate a:hover {
+  text-decoration: underline;
+  transform: scale(1.05);
+  color: #27ae60;
 } 
 
 .foot-logo {

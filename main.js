@@ -7,7 +7,6 @@ const navigation = document.querySelector(".navigation");
 
 
 menuToggle.addEventListener("click", () => {
-  console.log("clicked");
   navigation.classList.toggle("active");
   menuToggle.classList.toggle("active");
 });
